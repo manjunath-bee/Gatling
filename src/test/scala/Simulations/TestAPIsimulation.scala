@@ -1,10 +1,14 @@
 package com.octoperf.tutorials.one
 
-import scala.concurrent.duration._
-
+import io.gatling.jdbc.Predef._
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import io.gatling.jdbc.Predef._
+import scala.language.postfixOps
+import scala.concurrent.duration._
+import io.gatling.core.controller.inject.open.RampBuilder
+
+
+
 
 class PetStoreSimulation1 extends Simulation {
 
@@ -21,5 +25,10 @@ class PetStoreSimulation1 extends Simulation {
     .exec(http("request_0")
       .get("/actions/Catalog.action"))
 
-  setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
+
+  setUp(scn.inject(atOnceUsers(3)))
+    .throttle(
+      reachRps(1).in(180.seconds) ,holdFor(3 minutes) )
+  .protocols(httpProtocol)
+
 }

@@ -1,0 +1,7 @@
+RUN	com.octoperf.tutorials.one.PetStoreSimulation1	petstoresimulation1	1623478513227	testing	3.6.0
+USER	PetStoreSimulation	START	1623478514933
+USER	PetStoreSimulation	START	1623478514933
+REQUEST		request_0	1623478514972	1623478516448	OK	 
+REQUEST		request_0	1623478514972	1623478516448	OK	 
+USER	PetStoreSimulation	END	1623478516474
+USER	PetStoreSimulation	END	1623478516474

@@ -1,0 +1,10 @@
+{
+  "simulation": "com.octoperf.tutorials.one.PetStoreSimulation1",
+  "simulationId": "petstoresimulation1",
+  "start": 1623583161225,
+  "description": "testing",
+  "scenarios": ["PetStoreSimulation"],
+  "assertions": [
+
+  ]
+}
